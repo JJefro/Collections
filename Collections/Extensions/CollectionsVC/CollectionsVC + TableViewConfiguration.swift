@@ -16,7 +16,7 @@ extension CollectionsVC {
         setTableViewDelegates()
         tableView.rowHeight = 40
         tableView.separatorInset = .init(top: 0, left: 20, bottom: 0, right: 20)
-        tableView.register(CollectionCell.self, forCellReuseIdentifier: Cells.collectionCell)
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
         setTableViewConstraints()
     }
 

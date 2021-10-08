@@ -8,14 +8,16 @@
 import UIKit
 import SnapKit
 
-class CollectionCell: UITableViewCell {
+class CustomTableViewCell: UITableViewCell {
+
+    static let identifier = "CustomTableViewCell"
 
     var collectionTitleLabel = UILabel()
     var collection = Collection()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(collectionTitleLabel)
+        contentView.addSubview(collectionTitleLabel)
         configureTitleLabel()
     }
 
@@ -45,9 +47,4 @@ class CollectionCell: UITableViewCell {
             make.leading.equalTo(self).inset(20)
         }
     }
-
-}
-
-struct Cells {
-    static let collectionCell = "CollectionCell"
 }
