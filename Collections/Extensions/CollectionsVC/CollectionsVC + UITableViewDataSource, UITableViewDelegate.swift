@@ -10,10 +10,11 @@ import UIKit
 
 extension CollectionsVC: UITableViewDataSource, UITableViewDelegate {
 
+    // MARK: - UITableviewDelegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var viewController = UIViewController()
 
-        switch indexPath.last {
+        switch indexPath.row {
         case 0:
             viewController = ArrayViewController()
         case 1:
@@ -32,7 +33,7 @@ extension CollectionsVC: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.collectionCell) as! CollectionCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier) as! CustomTableViewCell
         let collection = collections[indexPath.row]
         cell.set(collection: collection)
         cell.accessoryType = .disclosureIndicator
