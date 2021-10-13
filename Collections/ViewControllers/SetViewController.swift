@@ -9,7 +9,7 @@ import UIKit
 
 class SetViewController: UIViewController {
 
-    private var model = CollectionsModel()
+    private let model = ArrayModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,3 +10,14 @@ import Foundation
 struct Collection {
     var title = String()
 }
+
+struct ArrayOperation {
+    var title: String {
+        didSet {
+            isPerforming = false
+            isDone = true
+        }
+    }
+    var isDone = false
+    var isPerforming = false
+}

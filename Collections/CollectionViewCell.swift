@@ -7,37 +7,58 @@
 
 import UIKit
 import SnapKit
+import NVActivityIndicatorView
 
 class CollectionViewCell: UICollectionViewCell {
 
     static let identifier = "CustomCollectionViewCell"
+    private let model = ArrayModel()
 
-    private let textLabel: UILabel = {
+    var spinner: NVActivityIndicatorView = {
+        let indicator = NVActivityIndicatorView(
+            frame: .zero,
+            type: .pacman,
+            color: .yellow,
+            padding: 0
+        )
+        return indicator
+    }()
+
+    let textLabel: UILabel = {
         let label = UILabel()
-        label.text = "Create Int array with 10_000_000 elements"
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .center
         return label
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .gray
         contentView.addSubview(textLabel)
+        contentView.addSubview(spinner)
         contentView.clipsToBounds = true
-        createTextLabelConstraints()
+        createConstraints()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func createTextLabelConstraints() {
+    func updateCell(item: ArrayOperation) {
+        item.isPerforming ? spinner.startAnimating() : spinner.stopAnimating()
+        textLabel.isHidden = item.isPerforming
+        textLabel.text = item.title
+    }
+
+    private func createConstraints() {
+
+        spinner.snp.makeConstraints { make in
+            make.center.equalTo(contentView)
+            make.height.width.equalTo(30)
+        }
+
         textLabel.snp.makeConstraints { make in
             make.edges.equalTo(contentView)
-            make.centerY.centerX.equalTo(contentView)
         }
     }
 }

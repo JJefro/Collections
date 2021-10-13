@@ -8,12 +8,12 @@
 import UIKit
 import SnapKit
 
-class CustomTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
     static let identifier = "CustomTableViewCell"
 
     var collectionTitleLabel = UILabel()
-    var collection = Collection()
+    private var collection = Collection()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -27,7 +27,6 @@ class CustomTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
