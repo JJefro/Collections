@@ -13,16 +13,15 @@ extension CollectionsVC {
 
     func configureTableView() {
         view.addSubview(tableView)
-        setTableViewDelegates()
         tableView.rowHeight = 40
         tableView.separatorInset = .init(top: 0, left: 20, bottom: 0, right: 20)
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
         setTableViewConstraints()
     }
 
-    private func setTableViewDelegates() {
-        tableView.delegate = self
-        tableView.dataSource = self
+    func bind() {
+        tableView.delegate = dataSource
+        tableView.dataSource = dataSource
     }
 
     private func setTableViewConstraints() {
