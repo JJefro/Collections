@@ -1,8 +1,8 @@
 //
-//  CollectionViewCell.swift
+//  CustomCollectionViewCell.swift
 //  Collections
 //
-//  Created by Jevgenijs Jefrosinins on 09/10/2021.
+//  Created by Jevgenijs Jefrosinins on 08/10/2021.
 //
 
 import UIKit
@@ -10,23 +10,19 @@ import SnapKit
 import NVActivityIndicatorView
 
 class CollectionViewCell: UICollectionViewCell {
-
+    
     static let identifier = "CustomCollectionViewCell"
-    private let model = ArrayModel()
 
-    var spinner: NVActivityIndicatorView = {
-        let indicator = NVActivityIndicatorView(
+    var spinner = NVActivityIndicatorView(
             frame: .zero,
             type: .pacman,
-            color: .yellow,
+            color: R.color.collectionViewBackground(),
             padding: 0
         )
-        return indicator
-    }()
 
     let textLabel: UILabel = {
         let label = UILabel()
-        label.adjustsFontSizeToFitWidth = true
+        label.font = UIFont(name: "SF Pro Display Regular", size: 17)
         label.numberOfLines = 0
         label.textAlignment = .center
         return label

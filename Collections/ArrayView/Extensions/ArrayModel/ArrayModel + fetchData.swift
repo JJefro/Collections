@@ -1,8 +1,8 @@
 //
-//  ArrayModel + fetchData.swift
+//  ArrayViewController + fetchData.swift
 //  Collections
 //
-//  Created by Jevgenijs Jefrosinins on 13/10/2021.
+//  Created by Jevgenijs Jefrosinins on 09/10/2021.
 //
 
 import Foundation

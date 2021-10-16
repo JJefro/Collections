@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ArrayViewController: UIViewController {
 
@@ -17,14 +18,8 @@ class ArrayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.largeTitleDisplayMode = .never
         configureCollectionView()
         bind()
-        self.navigationItem.largeTitleDisplayMode = .never
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        model.generateRandomInt()
-        title = "Array: \(model.randomInt)"
     }
 }

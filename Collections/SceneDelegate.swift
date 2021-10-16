@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navController = UINavigationController(rootViewController: CollectionsVC())
 
         let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = UIColor.white
+        barAppearance.backgroundColor = UIColor.clear
         navController.navigationBar.standardAppearance = barAppearance
         navController.navigationBar.scrollEdgeAppearance = barAppearance
         

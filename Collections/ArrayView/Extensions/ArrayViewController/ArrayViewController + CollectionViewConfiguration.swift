@@ -1,12 +1,11 @@
 //
-//  ArrayViewController + UICollectionViewDelegate.swift
+//  ArrayViewController + FetchData.swift
 //  Collections
 //
-//  Created by Jevgenijs Jefrosinins on 09/10/2021.
+//  Created by Jevgenijs Jefrosinins on 13/10/2021.
 //
 
 import UIKit
-import SnapKit
 
 extension ArrayViewController {
 
@@ -18,7 +17,7 @@ extension ArrayViewController {
         collectionView = UICollectionView(
             frame: .zero,
             collectionViewLayout: layout)
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = R.color.collectionViewBackground()
         collectionView.register(
             CollectionViewCell.self,
             forCellWithReuseIdentifier: CollectionViewCell.identifier)

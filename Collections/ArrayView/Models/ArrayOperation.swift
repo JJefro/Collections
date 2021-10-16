@@ -1,15 +1,11 @@
 //
-//  Collection.swift
+//  ArrayOperation.swift
 //  Collections
 //
-//  Created by Jevgenijs Jefrosinins on 05/10/2021.
+//  Created by Jevgenijs Jefrosinins on 13/10/2021.
 //
 
 import Foundation
-
-struct Collection {
-    var title = String()
-}
 
 struct ArrayOperation {
     var title: String {

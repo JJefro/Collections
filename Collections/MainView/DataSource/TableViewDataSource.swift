@@ -2,7 +2,7 @@
 //  TableViewDataSource.swift
 //  Collections
 //
-//  Created by Jevgenijs Jefrosinins on 13/10/2021.
+//  Created by Jevgenijs Jefrosinins on 12/10/2021.
 //
 
 import UIKit
@@ -10,6 +10,7 @@ import UIKit
 class TableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     var objects: [Collection] = []
+    var randomInt = Int()
 
     private func getNavController() -> UINavigationController? {
         let keywindow = UIApplication.shared.connectedScenes.filter({$0.activationState == .foregroundActive})
@@ -27,10 +28,13 @@ class TableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
         switch indexPath.row {
         case 0:
             viewController = ArrayViewController()
+            viewController.title = "Array: \(randomInt)"
         case 1:
             viewController = SetViewController()
+            viewController.title = "Set: \(randomInt)"
         case 2:
             viewController = DictionaryViewController()
+            viewController.title = "Dictionary: \(randomInt)"
         default: break
         }
         tableView.deselectRow(at: indexPath, animated: true)

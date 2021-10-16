@@ -10,6 +10,7 @@ import UIKit
 class CollectionsVC: UIViewController {
 
     var tableView = UITableView()
+    var model = CollectionsModel()
     var dataSource = TableViewDataSource()
 
     override func viewDidLoad() {
@@ -18,5 +19,11 @@ class CollectionsVC: UIViewController {
         dataSource.objects = fetchData()
         configureTableView()
         bind()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        model.generateRandomInt()
+        dataSource.randomInt = model.randomInt
     }
 }
