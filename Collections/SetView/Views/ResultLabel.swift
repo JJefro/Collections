@@ -13,6 +13,7 @@ class ResultLabel: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.font = R.font.sfProDisplayRegular(size: 17)
         self.textAlignment = .center
         self.numberOfLines = 0
         self.textColor = R.color.tfTextColor()

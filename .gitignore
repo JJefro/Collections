@@ -6,7 +6,6 @@
 .DS_Store
 *.DS_Store
 **/.DS_Store
-*.generated.swift
 
 ## User settings
 xcuserdata/

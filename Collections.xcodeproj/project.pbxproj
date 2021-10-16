@@ -14,15 +14,19 @@
 		97117E1627186A0F001AAEEF /* SetViewController + UIElementsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97117E1527186A0F001AAEEF /* SetViewController + UIElementsConfiguration.swift */; };
 		972DD23F271759EE00521785 /* ArrayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD23E271759EE00521785 /* ArrayOperation.swift */; };
 		972DD2462718157D00521785 /* CollectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD2452718157D00521785 /* CollectionsModel.swift */; };
-		972DD24F2718284600521785 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD24E2718284600521785 /* CustomTextField.swift */; };
-		972DD2572718289700521785 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972DD2552718289700521785 /* TextFieldView.xib */; };
-		972DD2582718289700521785 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD2562718289700521785 /* TextFieldView.swift */; };
-		972DD25C2718296800521785 /* TextFieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD25B2718296800521785 /* TextFieldsModel.swift */; };
-		972DD25E2718296F00521785 /* TextFieldsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD25D2718296F00521785 /* TextFieldsSettings.swift */; };
 		9749A64B2711F2460049EB77 /* ArrayModel + fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A64A2711F2460049EB77 /* ArrayModel + fetchData.swift */; };
 		9749A650271557D60049EB77 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A64F271557D60049EB77 /* TableViewDataSource.swift */; };
 		9749A652271561E30049EB77 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A651271561E30049EB77 /* CollectionViewDataSource.swift */; };
 		9749A6542716C39D0049EB77 /* ArrayViewController + CollectionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A6532716C39D0049EB77 /* ArrayViewController + CollectionViewConfiguration.swift */; };
+		9755C69C271B1F180098999E /* TextFieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755C69B271B1F180098999E /* TextFieldsModel.swift */; };
+		9755C69E271B1F1F0098999E /* TextFieldsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755C69D271B1F1F0098999E /* TextFieldsSettings.swift */; };
+		9755C6A1271B1F710098999E /* TextFieldView + UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755C6A0271B1F710098999E /* TextFieldView + UITextFieldDelegate.swift */; };
+		9755C6A5271B1FE30098999E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755C6A4271B1FE30098999E /* CustomTextField.swift */; };
+		9755C6A7271B200C0098999E /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755C6A6271B200C0098999E /* TextFieldView.swift */; };
+		9755C6A9271B20170098999E /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9755C6A8271B20170098999E /* TextFieldView.xib */; };
+		9755C6AC271B20AE0098999E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755C6AB271B20AE0098999E /* R.generated.swift */; };
+		9768A1F2271B1E1E00E3BB6E /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9768A1F1271B1E1E00E3BB6E /* SF-Pro-Display-Bold.otf */; };
+		9768A1F4271B1E2700E3BB6E /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9768A1F3271B1E2700E3BB6E /* SF-Pro-Display-Regular.otf */; };
 		9778BEB0270C26B600A505ED /* CollectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778BEAF270C26B600A505ED /* CollectionsVC.swift */; };
 		9778BEB2270C2DEE00A505ED /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778BEB1270C2DEE00A505ED /* TableViewCell.swift */; };
 		9778BEB4270C381900A505ED /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778BEB3270C381900A505ED /* Collection.swift */; };
@@ -33,15 +37,11 @@
 		9778BEC9270C5C0B00A505ED /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778BEC8270C5C0B00A505ED /* DictionaryViewController.swift */; };
 		9778BECE270D778F00A505ED /* ArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778BECD270D778F00A505ED /* ArrayModel.swift */; };
 		977E98DF2710228F00C0073D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E98DE2710228F00C0073D /* CollectionViewCell.swift */; };
-		9783468927182A3300D86819 /* TextFieldView + UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783468827182A3300D86819 /* TextFieldView + UITextFieldDelegate.swift */; };
 		9798E8B3270AF9F300FEC618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9798E8B2270AF9F300FEC618 /* AppDelegate.swift */; };
 		9798E8B5270AF9F300FEC618 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9798E8B4270AF9F300FEC618 /* SceneDelegate.swift */; };
 		9798E8BC270AF9F400FEC618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9798E8BB270AF9F400FEC618 /* Assets.xcassets */; };
 		9798E8BF270AF9F400FEC618 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9798E8BD270AF9F400FEC618 /* LaunchScreen.storyboard */; };
-		97B17AC9270B03A400125DD1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B17AC8270B03A400125DD1 /* R.generated.swift */; };
 		97E22AA1271A247900F15A16 /* SetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E22AA0271A247900F15A16 /* SetViewModel.swift */; };
-		97E22ADD271B0F0800F15A16 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 97E22ADC271B0F0700F15A16 /* SF-Pro-Display-Regular.otf */; };
-		97E22ADF271B0F0E00F15A16 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 97E22ADE271B0F0E00F15A16 /* SF-Pro-Display-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,15 +54,19 @@
 		97117E1527186A0F001AAEEF /* SetViewController + UIElementsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetViewController + UIElementsConfiguration.swift"; sourceTree = "<group>"; };
 		972DD23E271759EE00521785 /* ArrayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOperation.swift; sourceTree = "<group>"; };
 		972DD2452718157D00521785 /* CollectionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsModel.swift; sourceTree = "<group>"; };
-		972DD24E2718284600521785 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		972DD2552718289700521785 /* TextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
-		972DD2562718289700521785 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
-		972DD25B2718296800521785 /* TextFieldsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsModel.swift; sourceTree = "<group>"; };
-		972DD25D2718296F00521785 /* TextFieldsSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsSettings.swift; sourceTree = "<group>"; };
 		9749A64A2711F2460049EB77 /* ArrayModel + fetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArrayModel + fetchData.swift"; sourceTree = "<group>"; };
 		9749A64F271557D60049EB77 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		9749A651271561E30049EB77 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		9749A6532716C39D0049EB77 /* ArrayViewController + CollectionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArrayViewController + CollectionViewConfiguration.swift"; sourceTree = "<group>"; };
+		9755C69B271B1F180098999E /* TextFieldsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsModel.swift; sourceTree = "<group>"; };
+		9755C69D271B1F1F0098999E /* TextFieldsSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsSettings.swift; sourceTree = "<group>"; };
+		9755C6A0271B1F710098999E /* TextFieldView + UITextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextFieldView + UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		9755C6A4271B1FE30098999E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		9755C6A6271B200C0098999E /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		9755C6A8271B20170098999E /* TextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
+		9755C6AB271B20AE0098999E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		9768A1F1271B1E1E00E3BB6E /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../Экспортированные шрифты/SF Pro Display/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		9768A1F3271B1E2700E3BB6E /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../Экспортированные шрифты/SF Pro Display/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		9778BEAF270C26B600A505ED /* CollectionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsVC.swift; sourceTree = "<group>"; };
 		9778BEB1270C2DEE00A505ED /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		9778BEB3270C381900A505ED /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
@@ -73,17 +77,13 @@
 		9778BEC8270C5C0B00A505ED /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		9778BECD270D778F00A505ED /* ArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayModel.swift; sourceTree = "<group>"; };
 		977E98DE2710228F00C0073D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		9783468827182A3300D86819 /* TextFieldView + UITextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextFieldView + UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		9798E8AF270AF9F300FEC618 /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9798E8B2270AF9F300FEC618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9798E8B4270AF9F300FEC618 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9798E8BB270AF9F400FEC618 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9798E8BE270AF9F400FEC618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9798E8C0270AF9F400FEC618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97B17AC8270B03A400125DD1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		97E22AA0271A247900F15A16 /* SetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModel.swift; sourceTree = "<group>"; };
-		97E22ADC271B0F0700F15A16 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../Экспортированные шрифты/SF Pro Display/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
-		97E22ADE271B0F0E00F15A16 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../Экспортированные шрифты/SF Pro Display/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,26 +277,17 @@
 		972DD24D2718281C00521785 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9783468A27182A5B00D86819 /* TextFields */,
+				9755C6A2271B1FA20098999E /* TextFields */,
 				97117E0F2718409F001AAEEF /* CustomButton.swift */,
 				970436A5271951C30027E747 /* ResultLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		972DD2592718289B00521785 /* TextFieldView */ = {
-			isa = PBXGroup;
-			children = (
-				972DD2562718289700521785 /* TextFieldView.swift */,
-				972DD2552718289700521785 /* TextFieldView.xib */,
-			);
-			path = TextFieldView;
-			sourceTree = "<group>";
-		};
 		972DD25A2718295100521785 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9783468C27182A8600D86819 /* TextFieldsModel */,
+				9755C69A271B1EE60098999E /* TextFieldsModel */,
 				97E22AA0271A247900F15A16 /* SetViewModel.swift */,
 			);
 			path = Models;
@@ -316,6 +307,58 @@
 				9749A651271561E30049EB77 /* CollectionViewDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		9755C69A271B1EE60098999E /* TextFieldsModel */ = {
+			isa = PBXGroup;
+			children = (
+				9755C69D271B1F1F0098999E /* TextFieldsSettings.swift */,
+				9755C69B271B1F180098999E /* TextFieldsModel.swift */,
+			);
+			path = TextFieldsModel;
+			sourceTree = "<group>";
+		};
+		9755C69F271B1F420098999E /* TextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				9755C6A0271B1F710098999E /* TextFieldView + UITextFieldDelegate.swift */,
+			);
+			path = TextFieldView;
+			sourceTree = "<group>";
+		};
+		9755C6A2271B1FA20098999E /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				9755C6A4271B1FE30098999E /* CustomTextField.swift */,
+				9755C6A3271B1FAB0098999E /* TextFieldsView */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		9755C6A3271B1FAB0098999E /* TextFieldsView */ = {
+			isa = PBXGroup;
+			children = (
+				9755C6A8271B20170098999E /* TextFieldView.xib */,
+				9755C6A6271B200C0098999E /* TextFieldView.swift */,
+			);
+			path = TextFieldsView;
+			sourceTree = "<group>";
+		};
+		9755C6AA271B209F0098999E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9755C6AB271B20AE0098999E /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9768A1F0271B1DFC00E3BB6E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9768A1F1271B1E1E00E3BB6E /* SF-Pro-Display-Bold.otf */,
+				9768A1F3271B1E2700E3BB6E /* SF-Pro-Display-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		9778BEBC270C47CD00A505ED /* Extensions */ = {
@@ -338,45 +381,10 @@
 		9783468727182A1B00D86819 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9755C69F271B1F420098999E /* TextFieldView */,
 				97117E14271869BF001AAEEF /* SetViewController */,
-				9783468B27182A6800D86819 /* TextFieldView */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		9783468A27182A5B00D86819 /* TextFields */ = {
-			isa = PBXGroup;
-			children = (
-				972DD24E2718284600521785 /* CustomTextField.swift */,
-				972DD2592718289B00521785 /* TextFieldView */,
-			);
-			path = TextFields;
-			sourceTree = "<group>";
-		};
-		9783468B27182A6800D86819 /* TextFieldView */ = {
-			isa = PBXGroup;
-			children = (
-				9783468827182A3300D86819 /* TextFieldView + UITextFieldDelegate.swift */,
-			);
-			path = TextFieldView;
-			sourceTree = "<group>";
-		};
-		9783468C27182A8600D86819 /* TextFieldsModel */ = {
-			isa = PBXGroup;
-			children = (
-				972DD25B2718296800521785 /* TextFieldsModel.swift */,
-				972DD25D2718296F00521785 /* TextFieldsSettings.swift */,
-			);
-			path = TextFieldsModel;
-			sourceTree = "<group>";
-		};
-		978346912718375B00D86819 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				97E22ADC271B0F0700F15A16 /* SF-Pro-Display-Regular.otf */,
-				97E22ADE271B0F0E00F15A16 /* SF-Pro-Display-Bold.otf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		9798E8A6270AF9F200FEC618 = {
@@ -400,27 +408,19 @@
 		9798E8B1270AF9F300FEC618 /* Collections */ = {
 			isa = PBXGroup;
 			children = (
-				97B17AC7270B039200125DD1 /* Resources */,
+				9755C6AA271B209F0098999E /* Resources */,
 				9798E8B2270AF9F300FEC618 /* AppDelegate.swift */,
 				9798E8B4270AF9F300FEC618 /* SceneDelegate.swift */,
 				972DD233271758BB00521785 /* MainView */,
 				972DD2392717597100521785 /* ArrayView */,
 				972DD24127175AA000521785 /* SetView */,
 				972DD24227175AAC00521785 /* DictionaryView */,
-				978346912718375B00D86819 /* Fonts */,
+				9768A1F0271B1DFC00E3BB6E /* Fonts */,
 				9798E8BB270AF9F400FEC618 /* Assets.xcassets */,
 				9798E8BD270AF9F400FEC618 /* LaunchScreen.storyboard */,
 				9798E8C0270AF9F400FEC618 /* Info.plist */,
 			);
 			path = Collections;
-			sourceTree = "<group>";
-		};
-		97B17AC7270B039200125DD1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				97B17AC8270B03A400125DD1 /* R.generated.swift */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,8 +431,8 @@
 			buildConfigurationList = 9798E8C3270AF9F400FEC618 /* Build configuration list for PBXNativeTarget "Collections" */;
 			buildPhases = (
 				8E67208E250B870A76D3B2FC /* [CP] Check Pods Manifest.lock */,
-				97B17AC6270AFEC000125DD1 /* RSwift */,
 				97B17ACA270B049700125DD1 /* SwiftLint */,
+				97B17AC6270AFEC000125DD1 /* RSwift */,
 				9798E8AB270AF9F300FEC618 /* Sources */,
 				9798E8AC270AF9F300FEC618 /* Frameworks */,
 				9798E8AD270AF9F300FEC618 /* Resources */,
@@ -485,10 +485,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				972DD2572718289700521785 /* TextFieldView.xib in Resources */,
-				97E22ADF271B0F0E00F15A16 /* SF-Pro-Display-Bold.otf in Resources */,
+				9755C6A9271B20170098999E /* TextFieldView.xib in Resources */,
 				9798E8BF270AF9F400FEC618 /* LaunchScreen.storyboard in Resources */,
-				97E22ADD271B0F0800F15A16 /* SF-Pro-Display-Regular.otf in Resources */,
+				9768A1F2271B1E1E00E3BB6E /* SF-Pro-Display-Bold.otf in Resources */,
+				9768A1F4271B1E2700E3BB6E /* SF-Pro-Display-Regular.otf in Resources */,
 				9798E8BC270AF9F400FEC618 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,31 +580,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9755C6A5271B1FE30098999E /* CustomTextField.swift in Sources */,
 				972DD2462718157D00521785 /* CollectionsModel.swift in Sources */,
 				9778BEC5270C5BDD00A505ED /* ArrayViewController.swift in Sources */,
-				972DD25E2718296F00521785 /* TextFieldsSettings.swift in Sources */,
 				972DD23F271759EE00521785 /* ArrayOperation.swift in Sources */,
+				9755C6A7271B200C0098999E /* TextFieldView.swift in Sources */,
 				97117E102718409F001AAEEF /* CustomButton.swift in Sources */,
 				977E98DF2710228F00C0073D /* CollectionViewCell.swift in Sources */,
-				972DD24F2718284600521785 /* CustomTextField.swift in Sources */,
+				9755C69C271B1F180098999E /* TextFieldsModel.swift in Sources */,
+				9755C69E271B1F1F0098999E /* TextFieldsSettings.swift in Sources */,
 				9749A650271557D60049EB77 /* TableViewDataSource.swift in Sources */,
 				9798E8B3270AF9F300FEC618 /* AppDelegate.swift in Sources */,
 				9798E8B5270AF9F300FEC618 /* SceneDelegate.swift in Sources */,
-				972DD2582718289700521785 /* TextFieldView.swift in Sources */,
 				9778BEB0270C26B600A505ED /* CollectionsVC.swift in Sources */,
 				9778BEBE270C47EC00A505ED /* CollectionsVC + TableViewConfiguration.swift in Sources */,
 				97117E1627186A0F001AAEEF /* SetViewController + UIElementsConfiguration.swift in Sources */,
 				9778BEB4270C381900A505ED /* Collection.swift in Sources */,
 				9749A652271561E30049EB77 /* CollectionViewDataSource.swift in Sources */,
-				972DD25C2718296800521785 /* TextFieldsModel.swift in Sources */,
+				9755C6AC271B20AE0098999E /* R.generated.swift in Sources */,
 				9778BEC9270C5C0B00A505ED /* DictionaryViewController.swift in Sources */,
 				9778BEC0270C485C00A505ED /* CollectionVC + FetchData.swift in Sources */,
+				9755C6A1271B1F710098999E /* TextFieldView + UITextFieldDelegate.swift in Sources */,
 				97E22AA1271A247900F15A16 /* SetViewModel.swift in Sources */,
 				9749A6542716C39D0049EB77 /* ArrayViewController + CollectionViewConfiguration.swift in Sources */,
-				97B17AC9270B03A400125DD1 /* R.generated.swift in Sources */,
 				9778BECE270D778F00A505ED /* ArrayModel.swift in Sources */,
 				9749A64B2711F2460049EB77 /* ArrayModel + fetchData.swift in Sources */,
-				9783468927182A3300D86819 /* TextFieldView + UITextFieldDelegate.swift in Sources */,
 				97117E13271864A8001AAEEF /* CardButton.swift in Sources */,
 				9778BEC7270C5BFB00A505ED /* SetViewController.swift in Sources */,
 				9778BEB2270C2DEE00A505ED /* TableViewCell.swift in Sources */,

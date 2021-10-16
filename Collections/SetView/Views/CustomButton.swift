@@ -14,6 +14,7 @@ class CustomButton: CardButton {
         super.init(frame: frame)
         self.backgroundColor = .clear
         self.setTitleColor(R.color.blue(), for: .normal)
+        self.titleLabel?.font = R.font.sfProDisplayRegular(size: 20)
         self.titleLabel?.textAlignment = .center
         self.titleLabel?.numberOfLines = 0
     }

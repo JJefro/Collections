@@ -7,9 +7,10 @@ opt_in_rules:
 excluded:
 - Carthage
 - Pods
+- Collections/Resources/R.generated.swift
+- R.generated.swift
 - SwiftLint/Common/3rdPartyLib
 - Collections/SceneDelegate.swift
-- R.generated.swift
 line_length:
     warning: 150
     error: 200
