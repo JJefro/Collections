@@ -38,13 +38,10 @@ extension DictionaryViewController: UICollectionViewDelegate, UICollectionViewDa
 
     // MARK: - UICollectionView Delegate Methods
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        model.operations[indexPath.item].isPerforming.toggle()
-        processingQueue.async { [self] in
-            model.updateTitle(at: indexPath.item)
-            DispatchQueue.main.async {
-                collectionView.reloadData()
-            }
+
+        model.performOperation(at: indexPath) {
+            collectionView.reloadItems(at: [indexPath])
         }
-        collectionView.reloadData()
+        collectionView.reloadItems(at: [indexPath])
     }
 }

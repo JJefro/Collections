@@ -40,13 +40,10 @@ class DictionaryViewController: UIViewController {
         if model.arrayWithContacts.isEmpty, model.dictionaryWithContacts.isEmpty {
             loadingView.isHidden = false
             spinner.startAnimating()
-            processingQueue.async { [self] in
-                model.generateCollections()
-                DispatchQueue.main.async {
-                    loadingView.isHidden = true
-                    spinner.stopAnimating()
-                }
-            }
+            model.generateCollections(completion: { [self] in
+                loadingView.isHidden = true
+                spinner.stopAnimating()
+            })
         }
     }
 }
