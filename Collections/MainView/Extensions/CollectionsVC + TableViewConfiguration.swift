@@ -13,6 +13,7 @@ extension CollectionsVC {
 
     func configureTableView() {
         view.addSubview(tableView)
+        tableView.backgroundColor = view.backgroundColor
         tableView.rowHeight = 40
         tableView.separatorInset = .init(top: 0, left: 20, bottom: 0, right: 20)
         tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)

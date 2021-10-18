@@ -51,6 +51,7 @@ class TableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
         let object = objects[indexPath.row]
         cell.set(collection: object)
         cell.accessoryType = .disclosureIndicator
+        cell.backgroundColor = R.color.mainViewBackground()
         return cell
     }
 }

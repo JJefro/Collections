@@ -16,7 +16,7 @@ class CustomTextField: UITextField {
     var minOfUppercaseCharRule = UILabel()
 
     var progressView = UIProgressView()
-    
+
     private var progressLineHeight = 7
     private var progressLineCornerRadius: CGFloat = 10
     private var validationRulesTextSize: CGFloat = 13
@@ -27,7 +27,7 @@ class CustomTextField: UITextField {
 
         layer.borderWidth = 1
         layer.cornerRadius = 10
-        layer.borderColor = UIColor.gray.cgColor
+        layer.borderColor = R.color.gray()?.cgColor
         self.clipsToBounds = true
     }
     /// When progress has changed, we change progress line length and progressTintColor with animation

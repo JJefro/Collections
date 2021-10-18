@@ -9,20 +9,20 @@ import UIKit
 import SnapKit
 import NVActivityIndicatorView
 
-class CollectionViewCell: UICollectionViewCell {
-    
-    static let identifier = "CustomCollectionViewCell"
+class ArrayVCollectionViewCell: UICollectionViewCell {
+
+    static let identifier = "ArrayVCollectionViewCell"
 
     var spinner = NVActivityIndicatorView(
             frame: .zero,
             type: .pacman,
-            color: R.color.collectionViewBackground(),
+            color: UITraitCollection.current.userInterfaceStyle == .dark ? .white : .black,
             padding: 0
         )
 
     let textLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "SF Pro Display Regular", size: 17)
+        label.font = R.font.sfProDisplayRegular(size: 17)
         label.numberOfLines = 0
         label.textAlignment = .center
         return label

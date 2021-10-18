@@ -26,7 +26,7 @@ class TextFieldModel {
         inputLimit = 10 - length
         return inputLimit
     }
-    
+
     func changeTextColor(text: String) -> NSMutableAttributedString {
         let rangeOfExtraText = NSRange(location: 10, length: text.utf16.count - 10)
         let string = NSAttributedString(string: text)
@@ -86,7 +86,7 @@ class TextFieldModel {
     func isContainsLowercase(text: String) -> Bool {
         return text.contains(where: { $0.isLowercase })
     }
-    
+
     func isContainsUppercase(text: String) -> Bool {
         return text.contains(where: { $0.isUppercase })
     }

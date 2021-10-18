@@ -12,16 +12,17 @@ extension ArrayViewController {
     func configureCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = lineSpacing
+        layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = layout.minimumLineSpacing
         collectionView = UICollectionView(
             frame: .zero,
             collectionViewLayout: layout)
-        collectionView.backgroundColor = R.color.collectionViewBackground()
+        collectionView.backgroundColor = view.backgroundColor
         collectionView.register(
-            CollectionViewCell.self,
-            forCellWithReuseIdentifier: CollectionViewCell.identifier)
-        makeConstraints()
+            ArrayVCollectionViewCell.self,
+            forCellWithReuseIdentifier: ArrayVCollectionViewCell.identifier)
+        makeCollectionViewConstraints()
+        bind()
     }
 
     func bind() {
@@ -29,7 +30,7 @@ extension ArrayViewController {
         collectionView.dataSource = dataSource
     }
 
-    private func makeConstraints() {
+    private func makeCollectionViewConstraints() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()

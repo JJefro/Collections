@@ -7,9 +7,10 @@
 
 import UIKit
 
-class CollectionViewDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ArrayVCollectionViewDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    private var model = ArrayModel()
+    var model = ArrayModel()
+    private let processingQueue = DispatchQueue(label: "heavyProccessingQueue", qos: .userInitiated, attributes: .concurrent)
 
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -28,13 +29,14 @@ class CollectionViewDataSource: NSObject, UICollectionViewDelegate, UICollection
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArrayVCollectionViewCell.identifier, for: indexPath) as! ArrayVCollectionViewCell
+
         let itemData = model.operations[indexPath.row]
         cell.updateCell(item: itemData)
 
-        cell.backgroundColor = !model.operations[indexPath.row].isDone ? R.color.gray() : R.color.lightGray()
-        cell.textLabel.textColor = !model.operations[indexPath.row].isDone ? R.color.blue() : R.color.textColor()
+        cell.backgroundColor = !model.operations[indexPath.row].isDone ? R.color.arrayViewCell() : R.color.arrayViewCell()?.withAlphaComponent(0.6)
+        cell.textLabel.textColor = !model.operations[indexPath.row].isDone ? R.color.blue() : R.color.arrayViewText()
+        cell.layer.cornerRadius = 25
 
         return cell
     }
@@ -42,16 +44,15 @@ class CollectionViewDataSource: NSObject, UICollectionViewDelegate, UICollection
     // MARK: UICollectionView Delegate Methods
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        if model.performingOperations < 2 {
+        if model.performingOperations < 1 {
             model.operations[indexPath.row].isPerforming.toggle()
-            let processingQueue = DispatchQueue(label: "jjefro.heavyProccessingQueue", qos: .userInitiated, attributes: .concurrent)
 
             processingQueue.async { [self] in
                 model.updateTitle(at: indexPath.item)
+                if model.operations[0].isDone, model.operations.count == 1 {
+                    model.appendData()
+                }
                 DispatchQueue.main.async {
-                    if model.operations[0].isDone, model.operations.count == 1 {
-                        model.appendData()
-                    }
                     collectionView.reloadData()
                 }
             }

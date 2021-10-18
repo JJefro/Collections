@@ -16,11 +16,12 @@ class CollectionsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Collections"
+        view.backgroundColor = R.color.mainViewBackground()
         dataSource.objects = fetchData()
         configureTableView()
         bind()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         model.generateRandomInt()
