@@ -8,27 +8,23 @@
 import Foundation
 
 class ArrayModel {
-    
+
     var operations: [ArrayOperation] = [ArrayOperation(title: "Create Int array with 10_000_000 elements")]
     private var data: [ArrayOperation] = []
 
     private var arrayOfInt = [Int]()
     private let arrayOfThousandInt = Array(0...999)
-    var performingOperations = 0 {
-        didSet {
-            print(performingOperations)
-        }
-    }
-    
+    var performingOperations = 0
+
     init() {
         let operation = fetchData()
         data.append(contentsOf: operation)
     }
-    
+
     func appendData() {
         operations.append(contentsOf: data)
     }
-    
+
     func updateTitle(at cellNumber: Int) {
             switch cellNumber {
             case 0:
@@ -40,7 +36,7 @@ class ArrayModel {
             default: break
             }
     }
-    
+
     private func performOperation(at cellNumber: Int) -> String {
         performingOperations += 1
         let start = DispatchTime.now()
@@ -79,7 +75,7 @@ class ArrayModel {
         performingOperations -= 1
         return "\(String(format: "%.3f", timeInterval)) ms"
     }
-    
+
     // MARK: - Array Operations
     private func generateArrayOfIntOneByOne() {
         var array = [Int]()
@@ -88,65 +84,64 @@ class ArrayModel {
         }
         arrayOfInt = array
     }
-    
+
     private func insertThousandIntAtTheBeginningOneByOne() {
         for int in 0...999 {
             arrayOfInt.insert(int, at: 0)
         }
     }
-    
+
     private func insertThousandIntAtTheBeginningAtOnce() {
         arrayOfInt.insert(contentsOf: arrayOfThousandInt, at: 0)
     }
-    
+
     private func insertThousandIntInTheMiddleOneByOne() {
         for int in 0...999 {
             arrayOfInt.insert(int, at: arrayOfInt.count / 2)
         }
     }
-    
+
     private func insertThousandIntInTheMiddleAtOnce() {
         arrayOfInt.insert(contentsOf: arrayOfThousandInt, at: arrayOfInt.count / 2)
     }
-    
+
     private func appendThousandIntOneByOne() {
         for int in 0...999 {
             arrayOfInt.append(int)
         }
     }
-    
+
     private func appendThousandIntAtOnce() {
         arrayOfInt.append(contentsOf: arrayOfThousandInt)
     }
-    
+
     private func removeThousandIntAtTheBeginningOneByOne() {
         for _ in 0...999 {
             arrayOfInt.removeFirst()
         }
     }
-    
+
     private func removeThousandIntAtTheBeginningAtOnce() {
         arrayOfInt.removeFirst(1000)
     }
-    
+
     private func removeThousandIntInTheMiddleOneByOne() {
         for _ in 0...999 {
             arrayOfInt.remove(at: arrayOfInt.count / 2)
         }
     }
-    
+
     private func removeThousandIntInTheMiddleAtOnce() {
         let range = ((arrayOfInt.count / 2) - 500)..<((arrayOfInt.count / 2) + 500)
-        print(range)
         arrayOfInt.removeSubrange(range)
     }
-    
+
     private func removeThousandIntInTheEndOneByOne() {
         for _ in 0...999 {
             arrayOfInt.removeLast()
         }
     }
-    
+
     private func removeThousandIntInTheEndAtOnce() {
         arrayOfInt.removeLast(1000)
     }

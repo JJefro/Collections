@@ -106,20 +106,38 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 12 colors.
+  /// This `R.color` struct is generated, and contains static references to 21 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `ArrayViewBackground`.
+    static let arrayViewBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "ArrayViewBackground")
+    /// Color `ArrayViewCell`.
+    static let arrayViewCell = Rswift.ColorResource(bundle: R.hostingBundle, name: "ArrayViewCell")
+    /// Color `ArrayViewText`.
+    static let arrayViewText = Rswift.ColorResource(bundle: R.hostingBundle, name: "ArrayViewText")
     /// Color `Blue`.
     static let blue = Rswift.ColorResource(bundle: R.hostingBundle, name: "Blue")
     /// Color `CollectionViewBackground`.
     static let collectionViewBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "CollectionViewBackground")
+    /// Color `DictionaryViewBackground`.
+    static let dictionaryViewBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "DictionaryViewBackground")
+    /// Color `DictionaryViewCell`.
+    static let dictionaryViewCell = Rswift.ColorResource(bundle: R.hostingBundle, name: "DictionaryViewCell")
+    /// Color `DictionaryViewTextColor`.
+    static let dictionaryViewTextColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "DictionaryViewTextColor")
     /// Color `Gray`.
     static let gray = Rswift.ColorResource(bundle: R.hostingBundle, name: "Gray")
     /// Color `LightGray`.
     static let lightGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "LightGray")
+    /// Color `MainViewBackground`.
+    static let mainViewBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "MainViewBackground")
+    /// Color `MainViewTextColor`.
+    static let mainViewTextColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "MainViewTextColor")
     /// Color `SetViewBackgroundColor`.
     static let setViewBackgroundColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "SetViewBackgroundColor")
+    /// Color `SetViewTextColor`.
+    static let setViewTextColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "SetViewTextColor")
     /// Color `TextColor`.
     static let textColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "TextColor")
     /// Color `tfBlue`.
@@ -143,6 +161,33 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "ArrayViewBackground", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func arrayViewBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.arrayViewBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "ArrayViewCell", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func arrayViewCell(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.arrayViewCell, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "ArrayViewText", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func arrayViewText(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.arrayViewText, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "Blue", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
@@ -157,6 +202,33 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func collectionViewBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.collectionViewBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "DictionaryViewBackground", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func dictionaryViewBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.dictionaryViewBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "DictionaryViewCell", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func dictionaryViewCell(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.dictionaryViewCell, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "DictionaryViewTextColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func dictionaryViewTextColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.dictionaryViewTextColor, compatibleWith: traitCollection)
     }
     #endif
 
@@ -179,11 +251,38 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "MainViewBackground", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func mainViewBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.mainViewBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "MainViewTextColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func mainViewTextColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.mainViewTextColor, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "SetViewBackgroundColor", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func setViewBackgroundColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.setViewBackgroundColor, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "SetViewTextColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func setViewTextColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.setViewTextColor, compatibleWith: traitCollection)
     }
     #endif
 
@@ -250,6 +349,30 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
+    /// `UIColor(named: "ArrayViewBackground", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func arrayViewBackground(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.arrayViewBackground.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "ArrayViewCell", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func arrayViewCell(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.arrayViewCell.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "ArrayViewText", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func arrayViewText(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.arrayViewText.name)
+    }
+    #endif
+
+    #if os(watchOS)
     /// `UIColor(named: "Blue", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func blue(_: Void = ()) -> UIKit.UIColor? {
@@ -262,6 +385,30 @@ struct R: Rswift.Validatable {
     @available(watchOSApplicationExtension 4.0, *)
     static func collectionViewBackground(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.collectionViewBackground.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "DictionaryViewBackground", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func dictionaryViewBackground(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.dictionaryViewBackground.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "DictionaryViewCell", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func dictionaryViewCell(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.dictionaryViewCell.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "DictionaryViewTextColor", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func dictionaryViewTextColor(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.dictionaryViewTextColor.name)
     }
     #endif
 
@@ -282,10 +429,34 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
+    /// `UIColor(named: "MainViewBackground", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func mainViewBackground(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.mainViewBackground.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "MainViewTextColor", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func mainViewTextColor(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.mainViewTextColor.name)
+    }
+    #endif
+
+    #if os(watchOS)
     /// `UIColor(named: "SetViewBackgroundColor", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func setViewBackgroundColor(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.setViewBackgroundColor.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "SetViewTextColor", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func setViewTextColor(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.setViewTextColor.name)
     }
     #endif
 

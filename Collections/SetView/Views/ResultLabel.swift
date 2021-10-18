@@ -7,16 +7,15 @@
 
 import Foundation
 import UIKit
-import SnapKit
 
 class ResultLabel: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.font = R.font.sfProDisplayRegular(size: 17)
         self.textAlignment = .center
         self.numberOfLines = 0
-        self.textColor = R.color.tfTextColor()
+        self.textColor = R.color.setViewTextColor()
+        self.font = R.font.sfProDisplayRegular(size: 17)
         self.backgroundColor = .clear
         self.text = ""
     }

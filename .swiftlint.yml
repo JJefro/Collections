@@ -12,7 +12,7 @@ excluded:
 - SwiftLint/Common/3rdPartyLib
 - Collections/SceneDelegate.swift
 line_length:
-    warning: 150
+    warning: 180
     error: 200
     ignores_function_declarations: true
     ignores_comments: true

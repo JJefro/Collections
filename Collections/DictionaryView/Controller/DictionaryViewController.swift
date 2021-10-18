@@ -6,14 +6,47 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class DictionaryViewController: UIViewController {
 
-    private let model = ArrayModel()
+    var collectionView: UICollectionView!
+    let model = DictionaryModel()
+
+    var arrayLabel = UILabel()
+    var dictionaryLabel = UILabel()
+    var stackView = UIStackView()
+    private var arrayWithContacts = [Contact]()
+    private var dictionaryWithContacts = [String: String]()
+
+    var spinner = NVActivityIndicatorView(
+        frame: .zero,
+        type: .pacman,
+        color: UITraitCollection.current.userInterfaceStyle == .dark ? .white : .black,
+        padding: 0
+    )
+    var loadingView = UIView()
+    let processingQueue = DispatchQueue(label: "heavyProccessingQueue", qos: .userInitiated)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.largeTitleDisplayMode = .never
-        view.backgroundColor = .systemPink
+        view.backgroundColor = R.color.dictionaryViewBackground()
+        configureElements()
+        generateCollections()
+    }
+
+    private func generateCollections() {
+        if model.arrayWithContacts.isEmpty, model.dictionaryWithContacts.isEmpty {
+            loadingView.isHidden = false
+            spinner.startAnimating()
+            processingQueue.async { [self] in
+                model.generateCollections()
+                DispatchQueue.main.async {
+                    loadingView.isHidden = true
+                    spinner.stopAnimating()
+                }
+            }
+        }
     }
 }

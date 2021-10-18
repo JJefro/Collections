@@ -12,11 +12,18 @@
 		97117E102718409F001AAEEF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97117E0F2718409F001AAEEF /* CustomButton.swift */; };
 		97117E13271864A8001AAEEF /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97117E12271864A8001AAEEF /* CardButton.swift */; };
 		97117E1627186A0F001AAEEF /* SetViewController + UIElementsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97117E1527186A0F001AAEEF /* SetViewController + UIElementsConfiguration.swift */; };
+		97254796271CF37E009B59DC /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97254795271CF37E009B59DC /* String + Extension.swift */; };
+		97254798271CF39F009B59DC /* DictionaryViewController + Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97254797271CF39F009B59DC /* DictionaryViewController + Configuration.swift */; };
+		9725479A271CF3C5009B59DC /* DictionaryViewController + UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97254799271CF3C5009B59DC /* DictionaryViewController + UICollectionViewDataSource.swift */; };
+		9725479C271CF3E6009B59DC /* DictionaryModel + fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725479B271CF3E6009B59DC /* DictionaryModel + fetchData.swift */; };
+		9725479F271CF41B009B59DC /* DictionaryVCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725479E271CF41B009B59DC /* DictionaryVCollectionViewCell.swift */; };
+		972547A1271CF447009B59DC /* DictionaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972547A0271CF447009B59DC /* DictionaryModel.swift */; };
+		972547A3271CF464009B59DC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972547A2271CF464009B59DC /* Contact.swift */; };
 		972DD23F271759EE00521785 /* ArrayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD23E271759EE00521785 /* ArrayOperation.swift */; };
 		972DD2462718157D00521785 /* CollectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD2452718157D00521785 /* CollectionsModel.swift */; };
 		9749A64B2711F2460049EB77 /* ArrayModel + fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A64A2711F2460049EB77 /* ArrayModel + fetchData.swift */; };
 		9749A650271557D60049EB77 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A64F271557D60049EB77 /* TableViewDataSource.swift */; };
-		9749A652271561E30049EB77 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A651271561E30049EB77 /* CollectionViewDataSource.swift */; };
+		9749A652271561E30049EB77 /* ArrayVCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A651271561E30049EB77 /* ArrayVCollectionViewDataSource.swift */; };
 		9749A6542716C39D0049EB77 /* ArrayViewController + CollectionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A6532716C39D0049EB77 /* ArrayViewController + CollectionViewConfiguration.swift */; };
 		9755C69C271B1F180098999E /* TextFieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755C69B271B1F180098999E /* TextFieldsModel.swift */; };
 		9755C69E271B1F1F0098999E /* TextFieldsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755C69D271B1F1F0098999E /* TextFieldsSettings.swift */; };
@@ -36,7 +43,7 @@
 		9778BEC7270C5BFB00A505ED /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778BEC6270C5BFB00A505ED /* SetViewController.swift */; };
 		9778BEC9270C5C0B00A505ED /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778BEC8270C5C0B00A505ED /* DictionaryViewController.swift */; };
 		9778BECE270D778F00A505ED /* ArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778BECD270D778F00A505ED /* ArrayModel.swift */; };
-		977E98DF2710228F00C0073D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E98DE2710228F00C0073D /* CollectionViewCell.swift */; };
+		977E98DF2710228F00C0073D /* ArrayVCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E98DE2710228F00C0073D /* ArrayVCollectionViewCell.swift */; };
 		9798E8B3270AF9F300FEC618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9798E8B2270AF9F300FEC618 /* AppDelegate.swift */; };
 		9798E8B5270AF9F300FEC618 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9798E8B4270AF9F300FEC618 /* SceneDelegate.swift */; };
 		9798E8BC270AF9F400FEC618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9798E8BB270AF9F400FEC618 /* Assets.xcassets */; };
@@ -52,11 +59,18 @@
 		97117E0F2718409F001AAEEF /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		97117E12271864A8001AAEEF /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
 		97117E1527186A0F001AAEEF /* SetViewController + UIElementsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetViewController + UIElementsConfiguration.swift"; sourceTree = "<group>"; };
+		97254795271CF37E009B59DC /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		97254797271CF39F009B59DC /* DictionaryViewController + Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryViewController + Configuration.swift"; sourceTree = "<group>"; };
+		97254799271CF3C5009B59DC /* DictionaryViewController + UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryViewController + UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		9725479B271CF3E6009B59DC /* DictionaryModel + fetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryModel + fetchData.swift"; sourceTree = "<group>"; };
+		9725479E271CF41B009B59DC /* DictionaryVCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryVCollectionViewCell.swift; sourceTree = "<group>"; };
+		972547A0271CF447009B59DC /* DictionaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryModel.swift; sourceTree = "<group>"; };
+		972547A2271CF464009B59DC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		972DD23E271759EE00521785 /* ArrayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOperation.swift; sourceTree = "<group>"; };
 		972DD2452718157D00521785 /* CollectionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsModel.swift; sourceTree = "<group>"; };
 		9749A64A2711F2460049EB77 /* ArrayModel + fetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArrayModel + fetchData.swift"; sourceTree = "<group>"; };
 		9749A64F271557D60049EB77 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
-		9749A651271561E30049EB77 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		9749A651271561E30049EB77 /* ArrayVCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayVCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		9749A6532716C39D0049EB77 /* ArrayViewController + CollectionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArrayViewController + CollectionViewConfiguration.swift"; sourceTree = "<group>"; };
 		9755C69B271B1F180098999E /* TextFieldsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsModel.swift; sourceTree = "<group>"; };
 		9755C69D271B1F1F0098999E /* TextFieldsSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsSettings.swift; sourceTree = "<group>"; };
@@ -76,7 +90,7 @@
 		9778BEC6270C5BFB00A505ED /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		9778BEC8270C5C0B00A505ED /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		9778BECD270D778F00A505ED /* ArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayModel.swift; sourceTree = "<group>"; };
-		977E98DE2710228F00C0073D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		977E98DE2710228F00C0073D /* ArrayVCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayVCollectionViewCell.swift; sourceTree = "<group>"; };
 		9798E8AF270AF9F300FEC618 /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9798E8B2270AF9F300FEC618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9798E8B4270AF9F300FEC618 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +143,58 @@
 				97117E1527186A0F001AAEEF /* SetViewController + UIElementsConfiguration.swift */,
 			);
 			path = SetViewController;
+			sourceTree = "<group>";
+		};
+		97254790271CF2F7009B59DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				972547A0271CF447009B59DC /* DictionaryModel.swift */,
+				972547A2271CF464009B59DC /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97254791271CF33B009B59DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9725479D271CF40F009B59DC /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97254792271CF343009B59DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97254794271CF364009B59DC /* DictionaryModel */,
+				97254793271CF358009B59DC /* DictionaryViewController */,
+				97254795271CF37E009B59DC /* String + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		97254793271CF358009B59DC /* DictionaryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				97254797271CF39F009B59DC /* DictionaryViewController + Configuration.swift */,
+				97254799271CF3C5009B59DC /* DictionaryViewController + UICollectionViewDataSource.swift */,
+			);
+			path = DictionaryViewController;
+			sourceTree = "<group>";
+		};
+		97254794271CF364009B59DC /* DictionaryModel */ = {
+			isa = PBXGroup;
+			children = (
+				9725479B271CF3E6009B59DC /* DictionaryModel + fetchData.swift */,
+			);
+			path = DictionaryModel;
+			sourceTree = "<group>";
+		};
+		9725479D271CF40F009B59DC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9725479E271CF41B009B59DC /* DictionaryVCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		972DD233271758BB00521785 /* MainView */ = {
@@ -215,7 +281,7 @@
 		972DD23C2717599A00521785 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				977E98DE2710228F00C0073D /* CollectionViewCell.swift */,
+				977E98DE2710228F00C0073D /* ArrayVCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -253,6 +319,9 @@
 		972DD24227175AAC00521785 /* DictionaryView */ = {
 			isa = PBXGroup;
 			children = (
+				97254792271CF343009B59DC /* Extensions */,
+				97254791271CF33B009B59DC /* Views */,
+				97254790271CF2F7009B59DC /* Models */,
 				972DD24427175AC600521785 /* Controller */,
 			);
 			path = DictionaryView;
@@ -304,7 +373,7 @@
 		9749A6562716C5DD0049EB77 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				9749A651271561E30049EB77 /* CollectionViewDataSource.swift */,
+				9749A651271561E30049EB77 /* ArrayVCollectionViewDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -580,23 +649,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972547A3271CF464009B59DC /* Contact.swift in Sources */,
 				9755C6A5271B1FE30098999E /* CustomTextField.swift in Sources */,
 				972DD2462718157D00521785 /* CollectionsModel.swift in Sources */,
+				97254796271CF37E009B59DC /* String + Extension.swift in Sources */,
 				9778BEC5270C5BDD00A505ED /* ArrayViewController.swift in Sources */,
 				972DD23F271759EE00521785 /* ArrayOperation.swift in Sources */,
 				9755C6A7271B200C0098999E /* TextFieldView.swift in Sources */,
+				9725479A271CF3C5009B59DC /* DictionaryViewController + UICollectionViewDataSource.swift in Sources */,
 				97117E102718409F001AAEEF /* CustomButton.swift in Sources */,
-				977E98DF2710228F00C0073D /* CollectionViewCell.swift in Sources */,
+				977E98DF2710228F00C0073D /* ArrayVCollectionViewCell.swift in Sources */,
+				9725479F271CF41B009B59DC /* DictionaryVCollectionViewCell.swift in Sources */,
 				9755C69C271B1F180098999E /* TextFieldsModel.swift in Sources */,
 				9755C69E271B1F1F0098999E /* TextFieldsSettings.swift in Sources */,
 				9749A650271557D60049EB77 /* TableViewDataSource.swift in Sources */,
 				9798E8B3270AF9F300FEC618 /* AppDelegate.swift in Sources */,
 				9798E8B5270AF9F300FEC618 /* SceneDelegate.swift in Sources */,
 				9778BEB0270C26B600A505ED /* CollectionsVC.swift in Sources */,
+				97254798271CF39F009B59DC /* DictionaryViewController + Configuration.swift in Sources */,
 				9778BEBE270C47EC00A505ED /* CollectionsVC + TableViewConfiguration.swift in Sources */,
 				97117E1627186A0F001AAEEF /* SetViewController + UIElementsConfiguration.swift in Sources */,
 				9778BEB4270C381900A505ED /* Collection.swift in Sources */,
-				9749A652271561E30049EB77 /* CollectionViewDataSource.swift in Sources */,
+				9749A652271561E30049EB77 /* ArrayVCollectionViewDataSource.swift in Sources */,
 				9755C6AC271B20AE0098999E /* R.generated.swift in Sources */,
 				9778BEC9270C5C0B00A505ED /* DictionaryViewController.swift in Sources */,
 				9778BEC0270C485C00A505ED /* CollectionVC + FetchData.swift in Sources */,
@@ -604,6 +678,8 @@
 				97E22AA1271A247900F15A16 /* SetViewModel.swift in Sources */,
 				9749A6542716C39D0049EB77 /* ArrayViewController + CollectionViewConfiguration.swift in Sources */,
 				9778BECE270D778F00A505ED /* ArrayModel.swift in Sources */,
+				9725479C271CF3E6009B59DC /* DictionaryModel + fetchData.swift in Sources */,
+				972547A1271CF447009B59DC /* DictionaryModel.swift in Sources */,
 				9749A64B2711F2460049EB77 /* ArrayModel + fetchData.swift in Sources */,
 				97117E13271864A8001AAEEF /* CardButton.swift in Sources */,
 				9778BEC7270C5BFB00A505ED /* SetViewController.swift in Sources */,

@@ -20,7 +20,7 @@ class SetViewController: UIViewController {
     var firstLabel = ResultLabel(frame: .zero)
     var middleLabel = ResultLabel(frame: .zero)
     var lastLabel = ResultLabel(frame: .zero)
-    
+
     var stackView = UIStackView()
     var scrollView = UIScrollView()
     var contentView = UIView()

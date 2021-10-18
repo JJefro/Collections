@@ -74,6 +74,7 @@ extension SetViewController {
         stackView.spacing = 20
         stackView.distribution = .equalSpacing
         stackView.alignment = .center
+        stackView.backgroundColor = view.backgroundColor
         stackView.addArrangedSubview(firstButton)
         stackView.addArrangedSubview(firstLabel)
         stackView.addArrangedSubview(middleButton)
