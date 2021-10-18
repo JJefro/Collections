@@ -21,6 +21,7 @@
 		972547A3271CF464009B59DC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972547A2271CF464009B59DC /* Contact.swift */; };
 		972DD23F271759EE00521785 /* ArrayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD23E271759EE00521785 /* ArrayOperation.swift */; };
 		972DD2462718157D00521785 /* CollectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DD2452718157D00521785 /* CollectionsModel.swift */; };
+		97467E1D271E333200980773 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97467E1C271E333200980773 /* Dispatch.swift */; };
 		9749A64B2711F2460049EB77 /* ArrayModel + fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A64A2711F2460049EB77 /* ArrayModel + fetchData.swift */; };
 		9749A650271557D60049EB77 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A64F271557D60049EB77 /* TableViewDataSource.swift */; };
 		9749A652271561E30049EB77 /* ArrayVCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749A651271561E30049EB77 /* ArrayVCollectionViewDataSource.swift */; };
@@ -68,6 +69,7 @@
 		972547A2271CF464009B59DC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		972DD23E271759EE00521785 /* ArrayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOperation.swift; sourceTree = "<group>"; };
 		972DD2452718157D00521785 /* CollectionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsModel.swift; sourceTree = "<group>"; };
+		97467E1C271E333200980773 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		9749A64A2711F2460049EB77 /* ArrayModel + fetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArrayModel + fetchData.swift"; sourceTree = "<group>"; };
 		9749A64F271557D60049EB77 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		9749A651271561E30049EB77 /* ArrayVCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayVCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -362,6 +364,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		97467E1B271E331F00980773 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				97467E1C271E333200980773 /* Dispatch.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		9749A6552716C41B0049EB77 /* ArrayViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +490,7 @@
 				9755C6AA271B209F0098999E /* Resources */,
 				9798E8B2270AF9F300FEC618 /* AppDelegate.swift */,
 				9798E8B4270AF9F300FEC618 /* SceneDelegate.swift */,
+				97467E1B271E331F00980773 /* SupportingFiles */,
 				972DD233271758BB00521785 /* MainView */,
 				972DD2392717597100521785 /* ArrayView */,
 				972DD24127175AA000521785 /* SetView */,
@@ -684,6 +695,7 @@
 				97117E13271864A8001AAEEF /* CardButton.swift in Sources */,
 				9778BEC7270C5BFB00A505ED /* SetViewController.swift in Sources */,
 				9778BEB2270C2DEE00A505ED /* TableViewCell.swift in Sources */,
+				97467E1D271E333200980773 /* Dispatch.swift in Sources */,
 				970436A6271951C30027E747 /* ResultLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

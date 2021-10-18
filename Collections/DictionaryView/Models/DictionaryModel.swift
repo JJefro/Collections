@@ -16,43 +16,48 @@ class DictionaryModel {
     private var currentContactName = String()
 
     init() {
-        let operation = fetchData()
-        operations.append(contentsOf: operation)
+        operations = fetchData()
     }
 
-    func updateTitle(at cellNumber: Int) {
-        switch cellNumber {
+    func performOperation(at indexPath: IndexPath, completion: @escaping() -> Void) {
+        operations[indexPath.item].isPerforming.toggle()
+        Dispatch.processing.queue.async { [self] in
+            let start = DispatchTime.now()
+            switch indexPath.item {
+            case 0:
+                findFirstContactInArray()
+            case 1:
+                findFirstContactInDictionary()
+            case 2:
+                findLastContactInArray()
+            case 3:
+                findLastContactInDictionary()
+            case 4:
+                searchNotExistingElementInArray()
+            case 5:
+                searchNotExistingElementInDictionary()
+            default: break
+            }
+            let end = DispatchTime.now()
+            let nanoseconds = end.uptimeNanoseconds - start.uptimeNanoseconds
+            let timeInterval = Double(nanoseconds) / 1_000_000_000
+            DispatchQueue.main.async {
+                updateTitle(at: indexPath, result: "\(String(format: "%.3f", timeInterval)) ms")
+                completion()
+            }
+        }
+    }
+
+    private func updateTitle(at indexPath: IndexPath, result: String) {
+        switch indexPath.item {
         case 0...1:
-            operations[cellNumber].title = "First element search time: \(performOperation(at: cellNumber)). Result name: \(currentContactName)"
+            operations[indexPath.item].title = "First element search time: \(result). Result name: \(currentContactName)"
         case 2...3:
-            operations[cellNumber].title = "Last element search time: \(performOperation(at: cellNumber)). Result name: \(currentContactName)"
+            operations[indexPath.item].title = "Last element search time: \(result). Result name: \(currentContactName)"
         case 4...5:
-            operations[cellNumber].title = "Search time: \(performOperation(at: cellNumber))"
+            operations[indexPath.item].title = "Search time: \(result)"
         default: break
         }
-    }
-
-    private func performOperation(at cellNumber: Int) -> String {
-        let start = DispatchTime.now()
-        switch cellNumber {
-        case 0:
-            findFirstContactInArray()
-        case 1:
-            findFirstContactInDictionary()
-        case 2:
-            findLastContactInArray()
-        case 3:
-            findLastContactInDictionary()
-        case 4:
-            searchNotExistingElementInArray()
-        case 5:
-            searchNotExistingElementInDictionary()
-        default: break
-        }
-        let end = DispatchTime.now()
-        let nanoseconds = end.uptimeNanoseconds - start.uptimeNanoseconds
-        let timeInterval = Double(nanoseconds) / 1_000_000_000
-        return "\(String(format: "%.3f", timeInterval)) ms"
     }
 
     private func findFirstContactInArray() {
@@ -82,25 +87,19 @@ class DictionaryModel {
         name = dictionaryWithContacts.keys.first(where: { $0 == element })
     }
 
-    func generateCollections() {
-        var array = [Contact]()
-        var dictionary = [String: String]()
-        for number in 0...9_999_999 {
-            array.append(Contact(name: "Name\(number)", phoneNumber: "\(number)"))
-            dictionary["Name\(number)"] = "\(number)"
+    func generateCollections(completion: @escaping() -> Void) {
+        Dispatch.processing.queue.async {
+            var array = [Contact]()
+            var dictionary = [String: String]()
+            for number in 0...9_999_999 {
+                array.append(Contact(name: "Name\(number)", phoneNumber: "\(number)"))
+                dictionary["Name\(number)"] = "\(number)"
+            }
+            DispatchQueue.main.async { [self] in
+                arrayWithContacts = array
+                dictionaryWithContacts = dictionary
+                completion()
+            }
         }
-        arrayWithContacts = array
-        dictionaryWithContacts = dictionary
     }
-    //    private func generateRandomString() -> String {
-    //        let letters = "abcdefghijklmnopqrstuvwxyz"
-    //        let length = Int.random(in: 4...10)
-    //        return String((0..<length).map({ _ in letters.randomElement()! })).capitalizingFirstLetter()
-    //    }
-
-    //    private func generateRandomNumber() -> String {
-    //        let numbers = "0123456789"
-    //        let length = Int.random(in: 7...10)
-    //        return String((0..<length).map({ _ in numbers.description.randomElement()! }))
-    //    }
 }

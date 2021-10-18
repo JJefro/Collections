@@ -9,38 +9,31 @@ import Foundation
 
 class ArrayModel {
 
-    var operations: [ArrayOperation] = [ArrayOperation(title: "Create Int array with 10_000_000 elements")]
-    private var data: [ArrayOperation] = []
+    var operations: [ArrayOperation] = [] {
+        didSet {
+            Dispatch.background.queue.sync {
+                let data = fetchData()
+                if operations[0].isDone, operations.count == 1 {
+                    operations.append(contentsOf: data)
+                }
+                performingOperations = operations.filter({ $0.isPerforming == true }).count
+            }
+        }
+    }
 
     private var arrayOfInt = [Int]()
     private let arrayOfThousandInt = Array(0...999)
-    var performingOperations = 0
+    private(set) var performingOperations = 0
 
     init() {
-        let operation = fetchData()
-        data.append(contentsOf: operation)
+        operations = [ArrayOperation(title: "Create Int array with 10_000_000 elements")]
     }
 
-    func appendData() {
-        operations.append(contentsOf: data)
-    }
-
-    func updateTitle(at cellNumber: Int) {
-            switch cellNumber {
-            case 0:
-                operations[cellNumber].title = "Array creation time: \(performOperation(at: cellNumber))"
-            case 1..<7:
-                operations[cellNumber].title = "Insertion time: \(performOperation(at: cellNumber))"
-            case 7...12:
-                operations[cellNumber].title = "Removing time: \(performOperation(at: cellNumber))"
-            default: break
-            }
-    }
-
-    private func performOperation(at cellNumber: Int) -> String {
-        performingOperations += 1
-        let start = DispatchTime.now()
-            switch cellNumber {
+    func performOperation(at indexPath: IndexPath, completion: @escaping() -> Void) {
+        operations[indexPath.item].isPerforming.toggle()
+        Dispatch.processing.queue.async { [self] in
+            let start = DispatchTime.now()
+            switch indexPath.item {
             case 0:
                 generateArrayOfIntOneByOne()
             case 1:
@@ -68,12 +61,27 @@ class ArrayModel {
             case 12:
                 removeThousandIntInTheEndAtOnce()
             default: break
+            }
+            let end = DispatchTime.now()
+            let nanoseconds = end.uptimeNanoseconds - start.uptimeNanoseconds
+            let timeInterval = Double(nanoseconds) / 1_000_000_000
+            DispatchQueue.main.async {
+                updateTitle(at: indexPath, result: "\(String(format: "%.3f", timeInterval)) ms")
+                completion()
+            }
         }
-        let end = DispatchTime.now()
-        let nanoseconds = end.uptimeNanoseconds - start.uptimeNanoseconds
-        let timeInterval = Double(nanoseconds) / 1_000_000_000
-        performingOperations -= 1
-        return "\(String(format: "%.3f", timeInterval)) ms"
+    }
+
+    private func updateTitle(at indexPath: IndexPath, result: String) {
+        switch indexPath.item {
+        case 0:
+            operations[indexPath.item].title = "Array creation time: \(result)"
+        case 1..<7:
+            operations[indexPath.item].title = "Insertion time: \(result)"
+        case 7...12:
+            operations[indexPath.item].title = "Removing time: \(result)"
+        default: break
+        }
     }
 
     // MARK: - Array Operations

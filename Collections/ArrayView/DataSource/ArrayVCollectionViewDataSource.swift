@@ -43,20 +43,11 @@ class ArrayVCollectionViewDataSource: NSObject, UICollectionViewDelegate, UIColl
 
     // MARK: UICollectionView Delegate Methods
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
         if model.performingOperations < 1 {
-            model.operations[indexPath.row].isPerforming.toggle()
-
-            processingQueue.async { [self] in
-                model.updateTitle(at: indexPath.item)
-                if model.operations[0].isDone, model.operations.count == 1 {
-                    model.appendData()
-                }
-                DispatchQueue.main.async {
-                    collectionView.reloadData()
-                }
+            model.performOperation(at: indexPath) {
+                collectionView.reloadItems(at: [indexPath])
             }
-            collectionView.reloadData()
         }
+        collectionView.reloadItems(at: [indexPath])
     }
 }
