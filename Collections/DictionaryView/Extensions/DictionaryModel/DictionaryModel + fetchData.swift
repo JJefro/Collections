@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension DictionaryModel {
+extension DictionaryViewModel {
 
     func fetchData() -> [ArrayOperation] {
         let operation1 = ArrayOperation(title: "Find the first contact")

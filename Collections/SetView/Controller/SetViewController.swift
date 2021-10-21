@@ -27,11 +27,20 @@ class SetViewController: UIViewController {
 
     var model = SetViewModel()
 
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.largeTitleDisplayMode = .never
         view.backgroundColor = R.color.setViewBackgroundColor()
         configureElements()
+        createAccessibilityIdentifiers()
     }
 
     @objc func firstButtonPressed(sender: CustomButton!) {
@@ -43,14 +52,14 @@ class SetViewController: UIViewController {
 
     @objc func middleButtonPressed(sender: CustomButton!) {
         middleLabel.text = model.findUnmathingLetters(
-            input: topTextField.txtField.text!,
-            unmatch: bottomTextField.txtField.text!
+            firstInput: topTextField.txtField.text!,
+            secondInput: bottomTextField.txtField.text!
         )
     }
 
     @objc func lastButtonPressed(sender: CustomButton!) {
         lastLabel.text = model.findUniqueLetters(
-            input: topTextField.txtField.text!,
+            firstInput: topTextField.txtField.text!,
             secondInput: bottomTextField.txtField.text!
         )
     }

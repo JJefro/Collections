@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CollectionsModel {
+class MainViewModel {
 
     var randomInt = Int()
 

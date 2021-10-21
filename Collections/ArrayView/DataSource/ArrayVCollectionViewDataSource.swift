@@ -9,8 +9,7 @@ import UIKit
 
 class ArrayVCollectionViewDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    var model = ArrayModel()
-    private let processingQueue = DispatchQueue(label: "heavyProccessingQueue", qos: .userInitiated, attributes: .concurrent)
+    var model = ArrayViewModel()
 
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

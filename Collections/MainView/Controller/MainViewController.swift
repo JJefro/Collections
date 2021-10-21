@@ -7,11 +7,19 @@
 
 import UIKit
 
-class CollectionsVC: UIViewController {
+class MainViewController: UIViewController {
 
     var tableView = UITableView()
-    var model = CollectionsModel()
+    var model = MainViewModel()
     var dataSource = TableViewDataSource()
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +28,7 @@ class CollectionsVC: UIViewController {
         dataSource.objects = fetchData()
         configureTableView()
         bind()
+        createAccessibilityIdentifiers()
     }
 
     override func viewWillAppear(_ animated: Bool) {

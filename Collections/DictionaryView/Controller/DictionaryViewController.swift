@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 class DictionaryViewController: UIViewController {
 
     var collectionView: UICollectionView!
-    let model = DictionaryModel()
+    let model = DictionaryViewModel()
 
     var arrayLabel = UILabel()
     var dictionaryLabel = UILabel()
@@ -26,7 +26,14 @@ class DictionaryViewController: UIViewController {
         padding: 0
     )
     var loadingView = UIView()
-    let processingQueue = DispatchQueue(label: "heavyProccessingQueue", qos: .userInitiated)
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +41,7 @@ class DictionaryViewController: UIViewController {
         view.backgroundColor = R.color.dictionaryViewBackground()
         configureElements()
         generateCollections()
+        createAccessibilityIdentifiers()
     }
 
     private func generateCollections() {
