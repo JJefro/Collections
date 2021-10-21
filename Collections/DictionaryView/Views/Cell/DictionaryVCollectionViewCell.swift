@@ -36,14 +36,20 @@ class DictionaryVCollectionViewCell: UICollectionViewCell {
         createCellElementsConstraints()
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        createAccessibilityIdentifiers()
     }
 
     func updateCell(item: ArrayOperation) {
         item.isPerforming ? spinner.startAnimating() : spinner.stopAnimating()
         textLabel.isHidden = item.isPerforming
         textLabel.text = item.title
+    }
+
+    private func createAccessibilityIdentifiers() {
+        spinner.accessibilityIdentifier = DictionaryViewAccessibilityID.cellActivityIndicator
+        textLabel.accessibilityIdentifier = DictionaryViewAccessibilityID.cellTextLabel
     }
 
     private func createCellElementsConstraints() {

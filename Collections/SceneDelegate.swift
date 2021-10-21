@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let navController = UINavigationController(rootViewController: CollectionsVC())
+        let navController = UINavigationController(rootViewController: MainViewController())
 
         let barAppearance = UINavigationBarAppearance()
         barAppearance.backgroundColor = UIColor.clear
@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navController.navigationBar.scrollEdgeAppearance = barAppearance
         
         navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.accessibilityIdentifier = MainViewAccessibilityID.navigationBar
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene

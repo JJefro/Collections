@@ -7,13 +7,18 @@
 
 import Foundation
 
-class ArrayModel {
+class ArrayViewModel {
+
+    private let arrayModelBackgroundQueue = DispatchQueue(
+        label: "com.jjefro.arrayModelBackgroundQueue", qos: .background, attributes: .concurrent)
+    private let arrayModelProcessingQueue = DispatchQueue(
+        label: "com.jjefro.arrayModelProccessingQueue", qos: .userInitiated, attributes: .concurrent)
 
     var operations: [ArrayOperation] = [] {
         didSet {
-            Dispatch.background.queue.sync {
-                let data = fetchData()
+            arrayModelBackgroundQueue.sync {
                 if operations[0].isDone, operations.count == 1 {
+                    let data = fetchData()
                     operations.append(contentsOf: data)
                 }
                 performingOperations = operations.filter({ $0.isPerforming == true }).count
@@ -31,7 +36,7 @@ class ArrayModel {
 
     func performOperation(at indexPath: IndexPath, completion: @escaping() -> Void) {
         operations[indexPath.item].isPerforming.toggle()
-        Dispatch.processing.queue.async { [self] in
+        arrayModelProcessingQueue.async { [self] in
             let start = DispatchTime.now()
             switch indexPath.item {
             case 0:
