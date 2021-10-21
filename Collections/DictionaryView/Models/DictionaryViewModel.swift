@@ -1,5 +1,5 @@
 //
-//  DictionaryModel.swift
+//  DictionaryViewModel.swift
 //  Collections
 //
 //  Created by Jevgenijs Jefrosinins on 18/10/2021.
@@ -7,21 +7,52 @@
 
 import Foundation
 
-class DictionaryModel {
+class DictionaryViewModel {
+
+    private let dictModelProcessingQueue = DispatchQueue(
+        label: "com.jjefro.dictModelProccessingQueue", qos: .userInitiated, attributes: .concurrent)
+    private let dictModelBackgroundQueue = DispatchQueue(
+        label: "com.jjefro.dictModelBackgroundQueue", qos: .background, attributes: .concurrent)
 
     var operations: [ArrayOperation] = []
-    var arrayWithContacts: [Contact] = []
+
     var dictionaryWithContacts: [String: String] = [:]
+    var arrayWithContacts: [Contact] = [] {
+        didSet {
+            dictModelBackgroundQueue.sync {
+                firstContactName = arrayWithContacts.first!.name
+                lastContactName = arrayWithContacts.last!.name
+            }
+        }
+    }
 
     private var currentContactName = String()
+    private var firstContactName = String()
+    private var lastContactName = String()
 
     init() {
         operations = fetchData()
     }
 
+    func generateCollections(completion: @escaping() -> Void) {
+        dictModelProcessingQueue.async {
+            var array = [Contact]()
+            var dictionary = [String: String]()
+            for number in 0...9_999_999 {
+                array.append(Contact(name: "Name\(number)", phoneNumber: "\(number)"))
+                dictionary["Name\(number)"] = "\(number)"
+            }
+            DispatchQueue.main.async { [self] in
+                arrayWithContacts = array
+                dictionaryWithContacts = dictionary
+                completion()
+            }
+        }
+    }
+
     func performOperation(at indexPath: IndexPath, completion: @escaping() -> Void) {
         operations[indexPath.item].isPerforming.toggle()
-        Dispatch.processing.queue.async { [self] in
+        dictModelProcessingQueue.async { [self] in
             let start = DispatchTime.now()
             switch indexPath.item {
             case 0:
@@ -61,45 +92,37 @@ class DictionaryModel {
     }
 
     private func findFirstContactInArray() {
-        currentContactName = arrayWithContacts.first?.name ?? "Contact not found"
+        if arrayWithContacts.contains(where: { $0.name == firstContactName }) {
+            currentContactName = firstContactName
+        }
     }
 
     private func findFirstContactInDictionary() {
-        currentContactName = dictionaryWithContacts.keys.sorted().first ?? "Contact not found"
+        if dictionaryWithContacts.keys.contains(where: { $0 == firstContactName }) {
+            currentContactName = firstContactName
+        }
     }
 
     private func findLastContactInArray() {
-        currentContactName = arrayWithContacts.last?.name ?? "Contact not found"
+        if arrayWithContacts.contains(where: { $0.name == lastContactName }) {
+            currentContactName = lastContactName
+        }
     }
 
     private func findLastContactInDictionary() {
-        currentContactName = dictionaryWithContacts.keys.sorted().last ?? "Contact not found"
+        if dictionaryWithContacts.keys.contains(where: { $0 == lastContactName }) {
+            currentContactName = lastContactName
+        }
+
     }
 
-    private var name: String? = ""
     private func searchNotExistingElementInArray() {
         let element = "element"
-        name = arrayWithContacts.first(where: { $0.name == element })?.name
+        _ = arrayWithContacts.first(where: { $0.name == element })?.name
     }
 
     private func searchNotExistingElementInDictionary() {
         let element = "element"
-        name = dictionaryWithContacts.keys.first(where: { $0 == element })
-    }
-
-    func generateCollections(completion: @escaping() -> Void) {
-        Dispatch.processing.queue.async {
-            var array = [Contact]()
-            var dictionary = [String: String]()
-            for number in 0...9_999_999 {
-                array.append(Contact(name: "Name\(number)", phoneNumber: "\(number)"))
-                dictionary["Name\(number)"] = "\(number)"
-            }
-            DispatchQueue.main.async { [self] in
-                arrayWithContacts = array
-                dictionaryWithContacts = dictionary
-                completion()
-            }
-        }
+        _ = dictionaryWithContacts.keys.first(where: { $0 == element })
     }
 }

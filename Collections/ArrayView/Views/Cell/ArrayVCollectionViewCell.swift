@@ -33,11 +33,13 @@ class ArrayVCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(textLabel)
         contentView.addSubview(spinner)
         contentView.clipsToBounds = true
-        createConstraints()
+        contentView.isAccessibilityElement = true
+        createCellElementsConstraints()
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        createAccessibilityIdentifiers()
     }
 
     func updateCell(item: ArrayOperation) {
@@ -46,8 +48,12 @@ class ArrayVCollectionViewCell: UICollectionViewCell {
         textLabel.text = item.title
     }
 
-    private func createConstraints() {
+    private func createAccessibilityIdentifiers() {
+        spinner.accessibilityIdentifier = ArrayViewAccessibilityID.activityIndicator
+        textLabel.accessibilityIdentifier = ArrayViewAccessibilityID.cellTextLabel
+    }
 
+    private func createCellElementsConstraints() {
         spinner.snp.makeConstraints { make in
             make.center.equalTo(contentView)
             make.height.width.equalTo(30)

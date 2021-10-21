@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension CollectionsVC {
+extension MainViewController {
 
     func fetchData() -> [Collection] {
         let collection1 = Collection(title: "Array")

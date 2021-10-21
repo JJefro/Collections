@@ -29,6 +29,7 @@ class TableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
         case 0:
             viewController = ArrayViewController()
             viewController.title = "Array: \(randomInt)"
+            viewController.isAccessibilityElement = true
         case 1:
             viewController = SetViewController()
             viewController.title = "Set: \(randomInt)"
@@ -52,6 +53,7 @@ class TableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
         cell.set(collection: object)
         cell.accessoryType = .disclosureIndicator
         cell.backgroundColor = R.color.mainViewBackground()
+        cell.isAccessibilityElement = true
         return cell
     }
 }

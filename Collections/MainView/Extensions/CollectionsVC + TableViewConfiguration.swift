@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-extension CollectionsVC {
+extension MainViewController {
 
     func configureTableView() {
         view.addSubview(tableView)

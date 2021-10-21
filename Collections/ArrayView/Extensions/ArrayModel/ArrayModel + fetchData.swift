@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension ArrayModel {
+extension ArrayViewModel {
     func fetchData() -> [ArrayOperation] {
         let oper1 = ArrayOperation(title: "Insert at the beginning of an array 1000 elements one-by-one")
         let oper2 = ArrayOperation(title: "Insert at the beginning of an array 1000 elements at once")

@@ -83,7 +83,6 @@ extension SetViewController {
         stackView.addArrangedSubview(lastLabel)
         makeStackViewconstraints()
     }
-    
     private func makeStackViewconstraints() {
         stackView.snp.makeConstraints { make in
             make.edges.equalTo(contentView)
